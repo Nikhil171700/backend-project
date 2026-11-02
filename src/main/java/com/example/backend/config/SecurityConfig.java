@@ -40,7 +40,11 @@ public class SecurityConfig {
 //     .anyRequest().authenticated()
 // )
 .authorizeHttpRequests(auth -> auth
-    .requestMatchers("/auth/**", "/error").permitAll()
+.requestMatchers(
+    "/auth/**",
+    "/api/ai/**",
+    "/error"
+).permitAll()
     .anyRequest().authenticated()
 )
             // .authorizeHttpRequests(auth -> auth

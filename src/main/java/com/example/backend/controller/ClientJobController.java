@@ -18,7 +18,10 @@ import com.example.backend.service.ClientJobService;
 
 @RestController
 @RequestMapping("/client-jobs")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://24eg107e26.netlify.app"
+})
 public class ClientJobController {
 
     private final ClientJobService clientJobService;

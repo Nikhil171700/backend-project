@@ -20,7 +20,10 @@ import com.example.backend.service.ApplicationService;
 
 @RestController
 @RequestMapping("/applications")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://24eg107e26.netlify.app"
+})
 public class ApplicationController {
 
     private final ApplicationService applicationService;
